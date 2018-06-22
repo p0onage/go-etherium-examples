@@ -1,5 +1,5 @@
 # go-etherium-examples
-This repository is build to demonstrate Ethernet smart contracts. 
+This repository is build to demonstrate Etherium smart contracts. 
 
 # Introduction 
 I am currently developing this repository so you can quickly get involved with etherium smart contract development. This repository will be based on the offical go-etherium repository located here - https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial this repository go's into depth on commands for our blockchain CLI Geth so I won't do that here. 
