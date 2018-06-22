@@ -1,0 +1,35 @@
+# Create account and start mining
+
+In order to publish smart contracts to the blockchain we need to have workers. These workers are going to want paying for there work.
+Firsly inside the command prompt running Geth we want to run the following command to create an account.
+
+`personal.newAccount()`
+
+The above command will prompt you for a password. After this we want to assign the account to the miner.
+
+`miner.setEtherbase(eth.accounts[0])`
+
+Next, let's tell the miner to get to work!
+
+`miner.start()`
+
+
+
+# Publishing the smart contracts
+
+1. Go to the remix website http://remix.ethereum.org/
+2. Click the run tab at the top right hand corner of the screen.
+3. Choose Environment Web3 Provider 
+4. use the localhost we setup. http://localhost:8008
+
+
+We will probably need to unlock the account before we are able to publish the smart contract 
+`personal.unlockAccount(eth.accounts[0])`
+
+
+
+#Deploying Smart contract
+
+1. Input the solidity code into the code panel and on the right hand side click deploy. 
+
+Issues : Make sure you leave some time for your account to gain some Ether, you need gas to pay for the contract to be stored on the blockchain. 
