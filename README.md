@@ -23,7 +23,7 @@ Throughout these examples you will hopfully obtain usefull information and insig
 `geth init path/to/genesis.json`
 
 
-#Starting And Interacting
+# Starting And Interacting
 
 1.  To start the blockchain, we can run a geth with parameters  like below 
 
