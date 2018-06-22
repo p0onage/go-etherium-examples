@@ -17,6 +17,17 @@ Throughout these examples you will hopfully obtain usefull information and insig
 
 1. Download and install Geth, we use this tool to create the blockchain and run minners to do the work. You can download this executable from https://geth.ethereum.org/downloads/ afterwards add the geth executeable to your environment variables so you can easily run commands later on. Once done you can test in command prompt (CMD) with "geth help" command. 
 
-2. Clone the repo and go into the initialise folder. 
+2. Once you have geth setup, we need to intialise a blockchain ledger, this is essentially your blockchain solution. Clone this repository and go into the `initialise` folder and open command prompt in this directory. Once there you can use geth commands to initialise the blockchain. 
 
-3. Once you have geth setup, we need to intialise a blockchain ledger, this is essentially your blockchain solution. Navigate to a folder where you would like to have the blockchain files created and use the following command  
+
+`geth init path/to/genesis.json`
+
+
+# Starting And Interacting
+
+1.  To start the blockchain, we can run a geth with parameters  like below 
+
+ `geth --rpc --datadir ./blockchainDataDir/ --networkid 8338 --rpcport 8008 --rpccorsdomain "*" --rpcapi "db, eth,net,web3,miner,admin" --port 8765 --nodiscover --rpcaddr "0.0.0.0"  console`
+ 
+2. From here we can perform commands directly in the command prompt window or visit http://remix.ethereum.org/ to connect to the blockchain and run commands via an interface. Remix will act as your IDE for deploying and testing smart contracts throughout these examples. 
+ 
