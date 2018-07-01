@@ -1,5 +1,5 @@
 # go-etherium-examples
-This repository is build to demonstrate Ethernet smart contracts. 
+This repository is build to demonstrate Etherium smart contracts. 
 
 # Introduction 
 I am currently developing this repository so you can quickly get involved with etherium smart contract development. This repository will be based on the offical go-etherium repository located here - https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial this repository go's into depth on commands for our blockchain CLI Geth so I won't do that here. 
@@ -30,4 +30,6 @@ Throughout these examples you will hopfully obtain usefull information and insig
  `geth --rpc --datadir ./eth/data --networkid 8338 --rpcport 8008 --rpccorsdomain "*" --rpcapi "db, eth,net,web3,miner,admin" --port 8765 --nodiscover --rpcaddr "0.0.0.0"  console`
  
 2. From here we can perform commands directly in the command prompt window or visit http://remix.ethereum.org/ to connect to the blockchain and run commands via an interface. Remix will act as your IDE for deploying and testing smart contracts throughout these examples. 
+
+
  
