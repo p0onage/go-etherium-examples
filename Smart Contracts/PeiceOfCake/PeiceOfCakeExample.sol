@@ -1,25 +1,26 @@
 pragma solidity ^0.4.16;
 import "github.com/Arachnid/solidity-stringutils/strings.sol";
 
+
 contract GetAPieceOfTheCakev2 {
-    
-using strings for *;
-     struct Cake {
-        bool WasHappyWithCake; // weight is accumulated by delegation
-        uint pieces;  // if true, that person already voted
-        address delegate; // person delegated to
+  
+    using strings for *;
+
+    struct cake {
+        bool wasHappyWithCake; 
+        uint pieces;  
     }
     
      // This declares a state variable that
     // stores a `cake` struct for each possible address.
-    mapping(address => Cake) private Cakes;
+    mapping(address => cake) public cakes;
     
     //The person who created the cake
     address  cakeOwner;
     uint  totalPieces;
     
     constructor(uint _totalPieces) public{
-        totalPieces = _totalPieces;
+    totalPieces = _totalPieces;
     }
     
     function appendString(string s1, string s2) private returns(string concatanatedString){
@@ -27,13 +28,17 @@ using strings for *;
     }
   
      /// Create a new cake
-    function GetAPieceOfTheCake(uint quantity) public view
-            returns(string responseMessage)                
+    function GetAPieceOfTheCake(uint quantity) public
+            returns(string responseMessage, uint piecesofcakeleft, address adrss)                
     {
         if(totalPieces >= quantity){
-           cakeOwner = msg.sender;
-           totalPieces =  (totalPieces - quantity); 
+           address buyer = msg.sender;
+           totalPieces =  (totalPieces - quantity);
+           uint currentPieces = cakes[buyer].pieces;
+           cakes[buyer] = cake({wasHappyWithCake:true,pieces:(quantity + currentPieces) });
+           piecesofcakeleft = totalPieces;
            responseMessage = appendString("You now have a piece of the cake", "!");
+       adrss = buyer;
         } else {
             responseMessage =  "Not enough pieces of cake left.";
         }
@@ -42,8 +47,21 @@ using strings for *;
     
     function HowMuchCakeDoIOwn() public view
                                 returns(uint cakePieces){
-        cakePieces = Cakes[msg.sender].pieces;
+        cakePieces = cakes[msg.sender].pieces;
     }
     
-
+    function getAccount() public view
+                            returns (address sender){
+                            sender = msg.sender;
+                                
+                            
+  }
+  
+   function getPiecesLeft() public view
+                            returns (uint piecesLeft){
+                            piecesLeft = totalPieces;
+                                
+                            
+  }
+    
 }
