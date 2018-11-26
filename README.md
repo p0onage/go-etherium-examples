@@ -27,7 +27,7 @@ Throughout these examples you will hopfully obtain usefull information and insig
 
 1.  To start the blockchain, we can run a geth with parameters  like below 
 
- `geth --rpc --datadir ./eth/data --networkid 8338 --rpcport 8008 --rpccorsdomain "*" --rpcapi "db, eth,net,web3,miner,admin" --port 8765 --nodiscover --rpcaddr "0.0.0.0"  console`
+ `geth --rpc --datadir ./eth/data --networkid 8338 --rpcport 8008 --rpccorsdomain "*" --rpcapi "db, eth,net,web3,miner,admin,personal" --port 8765 --nodiscover --rpcaddr "0.0.0.0"  console`
  
 2. From here we can perform commands directly in the command prompt window or visit http://remix.ethereum.org/ to connect to the blockchain and run commands via an interface. Remix will act as your IDE for deploying and testing smart contracts throughout these examples. 
 
