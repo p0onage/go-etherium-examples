@@ -20,6 +20,8 @@ Throughout these examples you will hopfully obtain usefull information and insig
 2. Once you have geth setup, we need to intialise a blockchain ledger, this is essentially your blockchain solution. Clone this repository and go into the `initialise` folder and open command prompt in this directory. Once there you can use geth commands to initialise the blockchain. 
 
 `mkdir .\eth\data` 
+
+
 `geth --datadir=./eth/data init genesis.json`
 
 
